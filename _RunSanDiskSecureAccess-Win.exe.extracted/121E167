@@ -1,0 +1,353 @@
+
+/*********************************Common Components**********************************/
+*{
+        font: 10pt "Segoe UI";
+        color: black;
+}
+
+*::disabled{
+    color: lightgray;
+}
+
+QCheckBox#checkContrat, QCheckBox#acceptCheckBox{
+    color: rgb(255, 0, 0);
+}
+
+QDialog{
+    background-color: white;
+}
+
+QHeaderView {
+    border:none;
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(77, 77, 77, 255), stop:0.843 rgba(51, 51, 51, 255), stop:0.844 rgba(30, 30, 30, 255), stop:1 rgba(38, 38, 38, 255));
+    height: 32px;
+    color: rgb(250,  250,  250) ;
+    text-align: left;
+}
+
+QHeaderView::section {
+    border:none;
+    height: 32px;
+    background-color: transparent;
+}
+
+QLabel#introInstall{
+    background-color: white;
+}
+QPushButton#linkLabel {
+    color: rgb(233, 71, 8);
+    background : none;
+    text-decoration: underline;
+}
+QLabel#network, QLabel#usb, QLabel#mp3, QLabel#hard, QLabel#buyLabel, QLabel#activateLabel, QLabel#tryLabel, QLabel#waitLabel{
+    font-weight: bold;
+}
+
+QLineEdit::disabled{
+    background-color: lightgray;
+    color: grey;
+}
+
+QTableView {
+    border:none;
+    background-color: rgb(39, 39, 39);
+    font-family: "Arial";
+    color: rgb(250,  250,  250) ;
+    font-size : 10pt;
+}
+
+QPushButton {
+    min-height: 25px;
+}
+/************************************* ScrollBar **************************************/
+
+QScrollBar:horizontal {
+    border: 2px solid rgb(30,30,30);
+    background: rgb(51,51,51);
+    border-radius : 5px;
+    margin: 0px 5px 0px 5px;
+    background-image : url(:res/images/scroll/scroll-slidebar-v.png);
+    height : 15px;
+   /* padding : 0 2px 2px 0;*/
+}
+QScrollBar::handle:horizontal {
+    border-radius:5px;
+    background : qlineargradient(spread:pad, x1:0.47695, y1:0.028, x2:0.482025, y2:0.994, stop:0.0100503 rgba(145, 223, 245, 255), stop:0.969849 rgba(57, 158, 195, 254));
+    margin: 0px 12px 0px 12px;
+    min-width: 15px;
+}
+
+QScrollBar::sub-line:horizontal {
+    border:none;
+    width: 10px;
+    margin-top : 2px;
+    subcontrol-position: left;
+    subcontrol-origin: content;
+}
+
+QScrollBar::add-line:horizontal {
+    border:none;
+    width: 10px;
+    margin-top : 2px;
+    subcontrol-position: right;
+    subcontrol-origin: content;
+}
+
+
+QScrollBar::right-arrow:horizontal{
+    image : url(:res/images/scroll/scroll-right.png);
+    min-width: 10px;
+}
+
+QScrollBar:left-arrow:horizontal{
+    image : url(:res/images/scroll/scroll-left.png);
+    min-width: 15px;
+}
+
+QScrollBar::sub-page:horizontal, QScrollBar::add-page:horizontal{
+    background: none;
+}
+
+/**************************************************************************/
+
+QScrollBar:vertical {
+    border: 2px solid rgb(30,30,30);
+    background: rgb(51,51,51);
+    background-repeat : repeat-y;
+    margin :0px -1px 0px 0px;
+    border-radius : 5px;
+    width : 15px;
+    background-image : url(:res/images/scroll/scroll-slidebar.png);
+    padding: 1px 0 0 2px;
+}
+
+QScrollBar::handle:vertical {
+    background : qlineargradient(spread:pad, x1:0.990251, y1:0.517, x2:0, y2:0.522364, stop:0.0100503 rgba(145, 223, 245, 255), stop:0.969849 rgba(57, 158, 195, 254));;
+    margin : 12px 0 12px 0;
+    border-radius : 5px;
+    min-height: 10px;
+}
+
+QScrollBar:up-arrow:vertical{
+    image : url(:res/images/scroll/scroll-up.png);
+    min-height: 15px;
+    margin : 2px 0 0 1px;
+}
+
+QScrollBar::sub-line:vertical{
+    border:none;
+    height : 10px;
+}
+
+QScrollBar::down-arrow:vertical {
+    image : url(:res/images/scroll/scroll-down.png);
+    height: 15px;
+    margin : 0 0 2px 1px;
+}
+QScrollBar::add-line:vertical {
+    border:none;
+    width: 17px;
+    height : 10px;
+}
+
+QScrollBar::sub-page:vertical, QScrollBar::add-page:vertical{
+    background: none;
+}
+
+
+/***************************************Container*********************************/
+
+QPushButton#closeButton{
+     border-image: url(:/res/images/CloseBtn.png);
+}
+
+/**********************************Message****************************************/
+
+QLabel#titleMessage{
+        color: white;
+}
+
+/********************************Registration******************************************/
+QLabel#msmErrorEmail{
+        color : red;
+}
+
+QLabel#introRegistration{
+    padding-left: 30px;
+    padding-right: 10px;
+}
+
+
+/**********************************Options************************************************/
+
+QFrame#imageOutlook, QFrame#outlookFrame{
+        border-image: url(:/res/images/Outlook.png);
+}
+
+QFrame#imageDocument, QFrame#documentFrame{
+        border-image: url(:/res/images/document.png);
+}
+QFrame#imageSpread, QFrame#spreadSheetsFrame{
+        border-image: url(:/res/images/spread.png);
+}
+QFrame#imagePresentation, QFrame#presentationFrame{
+        border-image: url(:/res/images/presentation.png);
+}
+QFrame#imagePicture, QFrame#photosFrame{
+        border-image: url(:/res/images/picture.png);
+}
+QFrame#imageMusic, QFrame#musicFrame{
+        border-image: url(:/res/images/music.png);
+}
+QFrame#imageVideo, QFrame#Videoframe{
+        border-image: url(:/res/images/video.png);
+}
+QFrame#otherFrame{
+   border-image: url(:/res/images/unknown.png);
+}
+
+
+QPushButton#openCalButton{
+     background-image: url(:/res/images/date.png);
+     background-repeat: no-repeat;
+}
+
+/********************************** Skype ************************************************/
+
+QFrame#frame_skypeCall{
+        border-image: url(:/res/images/SkypeAssets/callstart_128x128_alpha.png);
+}
+QFrame#frame_skypeInstantMessaging{
+        border-image: url(:/res/images/SkypeAssets/Message_128x128.png);
+}
+QFrame#frame_skypeVideo{
+        border-image: url(:/res/images/SkypeAssets/video__128x128_alpha.png);
+}
+QFrame#frame_skypePhone{
+        border-image: url(:/res/images/SkypeAssets/CallPhones_128x128.png);
+}
+QFrame#frame_skypeForward{
+        border-image: url(:/res/images/SkypeAssets/CallTransfer_128x128.png);
+}
+QFrame#frame_skypeVoiceMail{
+        border-image: url(:/res/images/SkypeAssets/Voicemail_128x128.png);
+}
+
+/********************************* Install ***********************************************/
+
+QWidget#widgetDrivesList{
+    background-image: url(:/res/images/install-bg.png);
+    background-repeat:repeat-x;
+}
+
+QPushButton#hardButtonv3, QPushButton#networkButtonv3, QPushButton#mp3Buttonv3, QPushButton#usbButtonv3, QPushButton#outlookButton, QPushButton#expressButton, QPushButton#windowButton, QPushButton#noMailerButton{
+    font-family: "Arial";
+    font-size: 12px;
+    font-weight: normal;
+    color : rgb(250,250,250);
+    background: none;
+    border: 0;
+    text-align: bottom center;
+}
+
+QPushButton#outlookButton::disabled, QPushButton#expressButton::disabled, QPushButton#windowButton::disabled, QPushButton#noMailerButton::disabled{
+    color: rgb(74, 84, 130);
+}
+
+QPushButton#hardButtonv3:checked, QPushButton#networkButtonv3:checked, QPushButton#mp3Buttonv3:checked, QPushButton#usbButtonv3:checked , QPushButton#outlookButton:checked, QPushButton#expressButton:checked, QPushButton#windowButton:checked, QPushButton#noMailerButton:checked{
+    color : rgb(82,166,198);
+}
+
+QPushButton#hardButtonv3 {
+    image: url(:/res/images/instal-device-hd.png);
+}
+
+QPushButton#hardButtonv3[low="true"] {
+    image: url(:/res/images/instal-device-hd_ml.png);
+}
+
+QPushButton#hardButtonv3:checked {
+    image: url(:/res/images/instal-device-hd-a.png);
+}
+
+QPushButton#hardButtonv3:checked[low="true"] {
+    image: url(:/res/images/instal-device-hd-abis.png);
+}
+
+QPushButton#networkButtonv3{
+    image: url(:/res/images/instal-device-nw-hd.png);
+}
+
+QPushButton#networkButtonv3:checked{
+    image: url(:/res/images/instal-device-nw-hd-a.png);
+}
+
+QPushButton#networkButtonv3[low="true"]{
+    image: url(:/res/images/instal-device-nw-hd_ml.png);
+}
+
+QPushButton#networkButtonv3:checked[low="true"]{
+    image: url(:/res/images/instal-device-nw-hd-abis.png);
+}
+
+QPushButton#mp3Buttonv3{
+    image: url(:/res/images/instal-device-usb.png);
+}
+
+QPushButton#mp3Buttonv3:checked{
+    image: url(:/res/images/instal-device-usb-a.png);
+}
+
+QPushButton#usbButtonv3{
+    image: url(:/res/images/instal-device-usb.png);
+}
+
+QPushButton#usbButtonv3:checked{
+    image: url(:/res/images/instal-device-usb-a.png);
+}
+
+QPushButton#usbButtonv3[low="true"]{
+    image: url(:/res/images/instal-device-usb_ml.png);
+}
+
+QPushButton#usbButtonv3:checked[low="true"]{
+    image: url(:/res/images/instal-device-usb-abis.png);
+}
+
+
+QWidget#widgetDriveInformationHeader{
+    background-repeat:repeat-x;
+    background-image: url(:/res/images/top-tab-bg.png);
+}
+
+QWidget#widgetDriveInformation{
+    background-color:rgb(39,39,39);
+}
+
+QWidget#widgetDriveInformationHeader QLabel{
+    color : rgb(250,250,250);
+    font-family: "Arial";
+    font-size: 14px;
+}
+
+QWidget#widgetDriveInformation QLabel{
+    color : rgb(250,250,250);
+    font-family: "Arial";
+    font-size: 12px;
+}
+
+QWidget#installLine1, QWidget#installLine2, QWidget#installLine3, QWidget#installLine4{
+    background-color: rgb(51,51,51);
+}
+
+/********************************** Sync Log ************************************************/
+
+QWidget#animatedBox{
+    background-image: url(:/res/images/presync-bg_01.png);
+}
+
+QLabel#preSyncBg{
+    qproperty-pixmap: url(:/res/images/presync-bg_02.png);
+}
+
+/********************************** Main window ************************************************/

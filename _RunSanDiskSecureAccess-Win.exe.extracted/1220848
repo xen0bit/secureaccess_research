@@ -1,0 +1,567 @@
+/**********************************************************************************************  commun  **/
+
+* {
+   font-family: "Arial";
+   font-size: 10pt;
+}
+
+QLabel, QCheckBox {
+   color: rgb(102,102,102);         /*gray*/
+}
+
+QLabel#errorTxt, QLabel#passwordErrorMsg, QLabel#msmErrorEmail {
+    color: rgb(233, 71, 8);         /*red*/
+}
+
+QCheckBox#checkContrat, QCheckBox#confirmDeleteCheckBox, QCheckBox#acceptEulaCheck, QLabel#onlineMarketingTitle, QCheckBox#logginCheckBox, QLabel#connectionInfoLabel, QLabel#onlineTitle {
+    color: rgb(42, 115, 175);       /*blue*/
+}
+
+QWidget#containerMiddle, QFrame#mainFrame, QFrame#centerFrame {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgb(255, 255, 255), stop:1 rgb(237, 237, 235));
+}
+
+QPushButton#pushButton_howto, QPushButton#pushButton_accessdata, QPushButton#linkLabel, QPushButton#hintLink, QPushButton#changePasswordLink, QPushButton#eulaLink, QPushButton#learnMoreLink {
+    background-color: transparent;
+    color: rgb(42, 115, 175);
+    border: none;
+    text-align:left;
+    text-decoration : underline;
+    padding-left : 0px;
+}
+
+QPushButton#pushButton_howto, QPushButton#pushButton_accessdata, QPushButton#hintLink:pressed, QPushButton#changePasswordLink:pressed, QPushButton#eulaLink:pressed, QPushButton#learnMoreLink:pressed {
+    padding-left: 1px;
+}
+
+QLabel#createLbl, QLabel#loginFormLbl, QLabel#onlineMarketingTitle, QLabel#tutorialTitleLabel, QLabel#createTitleLabel, QLabel#onlineTitle, QLabel#registrationTitle, QLabel#titleLabel {
+    font-size: 13pt;
+    font-weight: bold;
+}
+
+QLabel#freeSpaceLbl, QLabel#movedStarLabel, QLabel#requiredLbl, QLabel#requiredLabel{
+    font-style : italic;
+    font-size : 10px;
+}
+
+/************************************************************************************************  menu  **/
+
+QMenu {
+    background-color: rgb(250, 250, 250);
+    color: rgb(42, 115, 175);
+}
+
+QMenu::item:selected {
+    background-color: rgb(96, 174, 227);
+    color: rgb(250, 250, 250);
+}
+
+QMenu::item:disabled {
+    color: rgb(150,150,150);
+    background-color: rgb(250, 250, 250);
+}
+
+QMenu::item:disabled:selected {
+    color: rgb(150,150,150);
+    background-color: rgb(250, 250, 250);
+}
+
+QMenu::indicator {
+    background-color:qlineargradient(spread:repeat, x1:0.47695,y1:0.028, x2:0.482025, y2:0.994, stop:0.467337 rgba(224, 223, 227, 255));
+    width: 13px;
+    height: 13px;
+}
+
+QMenu::indicator:checked {
+    image: url(:res/images/Backup/Check_checked_blue.png);
+}
+
+QMenu::indicator:checked:disabled{
+    image: url(:res/images/Backup/Check_checked_grey.png);
+}
+/*******************************************************************************************  ScrollBar  **/
+
+QScrollBar:horizontal {
+    border: 1px solid rgb(102,102,102);
+    background: rgb(150, 150, 150);
+    border-radius : 5px;
+    margin: 0px;
+    background-image : url(:res/images/YuuWaa/scroll-slidebar-v.png);
+    height : 15px;
+}
+QScrollBar::handle:horizontal {
+    border-radius:5px;
+    background : qlineargradient(spread:pad, x1:0.47695, y1:0.028, x2:0.482025, y2:0.994, stop:0.0100503 rgba(96, 174, 227, 255), stop:0.969849 rgba(42, 115, 175, 254));
+    margin: 0px 12px 0px 12px;
+    min-width: 15px;
+}
+
+QScrollBar::sub-line:horizontal {
+    border:none;
+    width: 10px;
+    margin-top : 2px;
+    subcontrol-position: left;
+    subcontrol-origin: content;
+}
+
+QScrollBar::add-line:horizontal {
+    border:none;
+    width: 10px;
+    margin-top : 2px;
+    subcontrol-position: right;
+    subcontrol-origin: content;
+}
+
+
+QScrollBar::right-arrow:horizontal{
+    image : url(:res/images/scroll/scroll-right.png);
+    min-width: 10px;
+}
+
+QScrollBar:left-arrow:horizontal{
+    image : url(:res/images/scroll/scroll-left.png);
+    min-width: 15px;
+}
+
+QScrollBar::sub-page:horizontal, QScrollBar::add-page:horizontal{
+    background: none;
+}
+
+
+QScrollBar:vertical {
+    border: 1px solid rgb(102,102,102);
+    background: rgb(150, 150, 150);
+    background-repeat : repeat-y;
+    margin :0px;
+    border-radius : 5px;
+    width : 15px;
+    background-image : url(:res/images/YuuWaa/scroll-slidebar.png);
+    padding: 0px;
+}
+
+QScrollBar::handle:vertical {
+    background : qlineargradient(spread:pad, x1:0.47695, y1:0.028, x2:0.482025, y2:0.994, stop:0.0100503 rgba(96, 174, 227, 255), stop:0.969849 rgba(42, 115, 175, 254));
+    margin : 12px 0 12px 0;
+    border-radius : 5px;
+    min-height: 10px;
+}
+
+QScrollBar:up-arrow:vertical{
+    image : url(:res/images/scroll/scroll-up.png);
+    min-height: 15px;
+    margin : 2px 0 0 1px;
+}
+
+QScrollBar::sub-line:vertical{
+    border:none;
+    height : 10px;
+}
+
+QScrollBar::down-arrow:vertical {
+    image : url(:res/images/scroll/scroll-down.png);
+    height: 15px;
+    margin : 0 0 2px 1px;
+}
+QScrollBar::add-line:vertical {
+    border:none;
+    width: 17px;
+    height : 10px;
+}
+
+QScrollBar::sub-page:vertical, QScrollBar::add-page:vertical{
+    background: none;
+}
+/******************************************************************************************  PUSHBUTTON  **/
+
+QPushButton {
+    border: 1px rgb(29, 139, 204);
+    border-radius: 5px;
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0.005, y2:0, stop:0 rgba(21, 87, 164, 240), stop:1 rgba(30, 139, 215, 240));
+    color: rgb(250, 250, 250);
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0.005, y2:0, stop:0 rgba(21, 87, 164, 255), stop:1 rgba(30, 139, 215, 255));
+}
+
+QPushButton::disabled {
+    border-color: rgb(90, 90, 90);
+    background-color: rgb(100, 100, 100);
+    color: rgb(220, 220, 220);
+}
+
+/*******************************************************************************************  CheckBox  **/
+
+QCheckBox::indicator {
+    background-color:qlineargradient(spread:repeat, x1:0.47695,y1:0.028, x2:0.482025, y2:0.994, stop:0.467337 rgba(224, 223, 227, 255));
+    border : 1px outset grey;
+    border-radius : 2px;
+    width:13px;
+    height:13px;
+}
+
+QCheckBox::indicator:checked {
+    image: url(:res/images/Backup/Check_checked_blue.png);
+}
+
+QCheckBox::indicator:checked:disabled{
+    image: url(:res/images/Backup/Check_checked_grey.png);
+}
+
+
+/**************************************************************************************** PROGRESS BAR  **/
+
+QProgressBar::chunk {
+    border-radius : 5px;
+    background-color: qlineargradient(spread:pad, x1:0.47695, y1:0.028, x2:0.482025, y2:0.994, stop:0.0100503 rgba(96, 174, 227, 255), stop:0.969849 rgba(42, 115, 175, 254));
+}
+
+QProgressBar {
+    border : 1px solid rgb(42, 115, 175);
+    border-radius : 5px;
+    text-align: center;
+    background-color: qlineargradient(spread:repeat, x1:0.47695, y1:0.028, x2:0.482025, y2:0.994, stop:0.0100503 rgba(224, 223, 227, 255), stop:0.969849 rgba(255, 255, 255, 254));
+}
+
+/************************************************************************************************* Tab  **/
+
+QTabWidget::pane {
+    border:none;
+}
+
+QTabWidget#tabWidget::pane {
+    background-color: rgb(250, 250, 250);
+    border : 1px solid rgb(200, 200, 200);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.QTabBar::tab{
+    border: 1px solid rgb(102, 102, 102);
+    margin-left : 5px;
+    padding:3px 8px 3px 8px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border : 1px solid rgb(200, 200, 200);
+    border-bottom : none;
+}
+
+QTabBar::tab:selected {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgb(200, 200, 200), stop:1 rgb(255, 255, 255));
+    color : rgb(102, 102, 102);
+}
+
+QTabBar::tab:!selected {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgb(200, 200, 200), stop:1 rgb(255, 255, 255));
+    color: rgb(42, 115, 175);
+}
+
+QTabBar::tab:hover {
+    color: rgb(151, 151, 151);
+}
+
+QTabBar::tab:first {
+     margin-left: 0;
+}
+
+QTableView {
+    border:none;
+    background-color: rgb(226,226,223);
+    color: rgb(102,102,102);
+}
+
+
+/***************************************************************************************  tree & header **/
+QTreeView{
+   background: rgb(226, 226, 223);
+   color: rgb(102,102,102);
+   selection-background-color: rgb(226, 226, 223);
+   border : none;
+}
+
+QTreeView::item{
+    border : 1px solid rgb(250, 250, 250);
+    border-top: none;
+    border-bottom: none;
+}
+
+QTreeView::item:selected{
+    background-color: rgba(255, 255, 255, 150);
+    color: rgb(102,102,102);
+}
+
+QHeaderView {
+    border:none;
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgb(237, 237, 237), stop:1 rgb(180, 180, 180));
+    color: rgb(102,102,102);
+}
+
+QHeaderView::section {
+    border:1px solid rgb(250, 250, 250);
+    height: 20px;  /*I don't know why but if you remove this line you will have vertical headers in your dropboxs*/
+    background-color: transparent;
+    padding-left: 4px;
+    padding-bottom: 4px;
+}
+
+/**************************************************************************************  Setup & login  **/
+
+QFrame#frameLogo {
+    background-image: url(:/res/images/SecureVault/login-header.png);
+    background-repeat:repeat-x;
+    border:none;
+}
+
+QLabel#setupTopLabel {
+    font-size: 13pt;
+    font-weight: bold;
+    font-style: italic;
+    color : white;
+}
+
+QLabel#passwordRuleLbl, QLabel#requiredElements {
+    font-size: 8pt;
+    font-style: italic;
+}
+
+QFrame#frameVaultImg {
+    background-image: url(:/res/images/SecureVault/create_vault-ill.png);
+}
+
+QFrame#loginFrameImg {
+    background-image: url(:/res/images/SecureVault/login-ill.png);
+}
+
+QFrame#loginLogoFrame {
+    background-image: url(:/res/images/SecureVault/login-header.png);
+    background-repeat:repeat-x;
+    border:none;
+}
+
+/***********************************************************************************************  popup **/
+QFrame#containerHeader, QFrame#advancedHeaderFrame{
+    background-image: url(:/res/images/SecureVault/online-header.png);
+    background-repeat:repeat-x;
+    border:none;
+}
+
+QFrame#containerFooter {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgb(255, 255, 255), stop:1 rgb(237, 237, 235));
+    border:none;
+}
+
+QFrame#productPopupLogo{
+    image-position: left;
+    border: none;
+}
+
+
+/*****************************************************************************************  main window **/
+QPushButton#aboutBtn {
+    border: none;
+    background-image: url(:/res/images/SecureVault/about-btn.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+}
+
+QFrame#headerFrame {
+    background-image: url(:/res/images/SecureVault/main-header.png);
+    background-repeat:repeat-x;
+    border:none;
+}
+
+QWidget#mainWidgetTop {
+    border : 1px solid rgb(0,0,255);
+    border-radius : 5px;
+    background-color: rgb(255, 255, 255);
+}
+QWidget#onlineWidget {
+    border : 2px solid rgb(0,0,255);
+    border-radius : 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+QWidget#fileListWidget {
+    background-image: url(:res/images/SecureVault/main-dragdrop-blue.png);
+    background-repeat:no-repeat;
+    background-position: right bottom;
+    background-color : rgb(226,226,223);
+}
+
+QTreeView#fileListTreeWidget {
+    background: transparent;
+}
+
+/****************************************************************************************  path finder  **/
+QLabel#folderIcon {
+    background-image: url(:/res/images/SecureVault/folder_blue-24.png);
+}
+
+QPushButton#buttonFolder {
+    color: rgb(42, 115, 175);       /*blue*/
+    text-align:left;
+    text-decoration : underline;
+    background : none;
+    font-size: 10pt;
+}
+
+QPushButton#buttonBackFolder{
+    color: rgb(42, 115, 175);       /*blue*/
+    text-align:left;
+    background : none;
+    font-size: 10pt;
+}
+
+QPushButton#buttonFolder:hover, QPushButton#buttonBackFolder:hover {
+    color: rgb(82, 166, 198);       /*light blue*/
+}
+
+/*********************************************************************************************  online  **/
+QWidget#onlineUnloggedImg, QPushButton#onlineImg {
+    background-repeat : no-repeat;
+    background-color : transparent;
+    background-position : top left;
+    margin-left : 2px;
+}
+
+QWidget#onlineUnloggedImg {
+    background-image : url(:/res/images/SecureVault/logo-online-unlogged.png);
+}
+
+QPushButton#onlineImg {
+    background-image : url(:/res/images/SecureVault/logo-online-logged.png);
+}
+
+QWidget#SecureVaultOnlineDialog {
+    background-image: url(:/res/images/SecureVault/create-account-ill.png);
+    background-repeat:no-repeat;
+    background-position : left center;
+}
+
+
+QLabel#createTitleLabel{
+    background-repeat:repeat-x;
+    background-image: url(:/res/images/YuuWaa/top-tab-bg.png);
+    border-radius: 5px;
+}
+
+QFrame#onlineFormWidget{
+    background-color: rgb(226, 226, 223);
+    border-radius: 5px;
+}
+
+QFrame#lineFrame {
+    background-color: rgb(0, 0, 255);
+    border:none;
+}
+
+QWidget#spaceWidget, QWidget#remoteWidget{
+    border : 1px solid rgb(42, 115, 175);
+    border-radius : 5px;
+}
+
+QWidget#onlineAccountInfoPnl, QWidget#onlineSpaceInfoPnl{
+    border : 1px solid rgb(200, 200, 200);
+    border-radius : 5px;
+}
+
+QLabel#movedStarLabel{
+    margin-left: 10px;
+}
+
+QLabel#selectTypeLabel {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgb(237, 237, 237), stop:1 rgb(180, 180, 180));
+    color: rgb(102, 102, 102);
+    border: none;
+    border-bottom: 1px solid rgb(250, 250, 250);
+    padding-bottom: 4px;
+}
+
+/***********************************************************************************  advanced options  **/
+QWidget#onlineImagePnl {
+    background-image: url(:/res/images/SecureVault/settings-ill.png);
+    background-repeat:no-repeat;
+    background-position: center;
+}
+
+QFrame#fileExtFrame {
+    background: rgb(226, 226, 223);
+    /*add a border*/
+}
+
+/******************************************************************************************  vault box  **/
+QPushButton#quiteButton{
+    border-image:url(:/res/images/SecureVault/quiteButton.png);
+    background-color : transparent;
+    border : none;
+}
+
+QFrame#successFrame{
+    border-image : url(:/res/images/ok.png);
+    background-color : transparent;
+}
+
+/******************************************************************************************** tutorial  **/
+
+QWidget#vaultIcon{
+    background-image: url(:/res/images/SecureVault/SV_vaultBox_DragEnter_small.png);
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+QWidget#bullet1, QWidget#bullet2, QWidget#bullet3, QWidget#bullet4{
+    background-image: url(:res/images/SecureVault/loopnone.png);
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+QWidget#dragIcon{
+   background-image: url(:/res/images/SecureVault/main-dragdrop-blueSmall.png);
+   background-repeat:no-repeat;
+   background-position:center;
+}
+
+/*****************************************************************************************  SLA Dialog  **/
+
+QWidget#slaWidgetLogo {
+   background-image: url(:/res/images/SecureVault/logo-online-logged.png);
+   background-repeat:no-repeat;
+   background-position: center;
+}
+
+/**********************************************************************************************  About  **/
+QFrame#aboutPoweredBy{
+    background-repeat:no-repeat;
+    background-position:center;
+    border:none;
+    text-decoration: underline;
+}
+
+/********************************************************************************  Registration Window  **/
+
+QWidget#headPanel {
+    border: 1px solid rgb(102, 102, 102);
+    border-right: none;
+    border-left: none;
+}
+
+QFrame#imageWoman {
+    border-image: none;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-image: url(:res/images/Backup/registration-bg.png);
+    background-color: rgb(226, 226, 223);
+}
+
+QFrame#registrationInfo {
+    background-color: rgb(226, 226, 223);
+    border: 1px solid rgb(102, 102, 102);
+    border-right: none;
+    border-left: none;
+}
+

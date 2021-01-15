@@ -1,0 +1,42 @@
+/******************************* Common Components ***********************************/
+/*************************************** FONT ****************************************/
+
+*{
+    font-size: 13pt;
+    font-family: "Lucida Grande";
+}
+
+/************************************* PushButton **************************************/
+
+QPushButton:flat {
+    font-size: 13pt;
+}
+
+QLabel#createLbl, QLabel#loginFormLbl, QLabel#onlineTitle, QLabel#onlineMarketingTitle {
+    font-size: 16pt;
+}
+
+QPushButton#eulaLink, QPushButton#hintLink, QPushButton#changePasswordLink, QPushButton#onlineSettingBtn, QPushButton#goOnlineBtn {
+    font-size: 13pt;
+}
+
+QPushButton#learnMoreLink {
+    font-size: 12pt;
+}
+
+QLabel#freeSpaceLbl {
+    font-size: 11pt;
+}
+
+QLabel#passwordRuleLbl, QLabel#requiredElements  {
+    font-size: 11pt;
+    font-style: italic;
+}
+
+QFileDialog QComboBox {
+    border: 1px black;
+}
+
+QTabWidget#tabWidget::pane {
+    border-radius: 5px;
+}

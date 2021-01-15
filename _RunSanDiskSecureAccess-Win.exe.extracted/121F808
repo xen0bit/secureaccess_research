@@ -1,0 +1,14 @@
+
+QTabWidget::tab-bar {
+    alignment: left;
+}
+
+QTabWidget::pane {
+    border-top: 1px solid rgb(168, 168, 168);
+}
+
+
+QLabel#text_step_welcome, QLabel#text_step_install, QLabel#text_step_profile, QLabel#text_step_option, QLabel#text_step_backup {
+    font-size: 10pt;
+}
+

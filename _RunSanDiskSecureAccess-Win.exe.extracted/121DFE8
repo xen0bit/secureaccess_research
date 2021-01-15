@@ -1,0 +1,27 @@
+*{
+    font-size: 13pt ;
+    font-family: "Segoe UI";
+}
+
+QLabel#pleaseReadLabel{
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+QLabel#text_step_welcome, QLabel#text_step_install, QLabel#text_step_profile, QLabel#text_step_option, QLabel#text_step_backup {
+    font-size: 12pt;
+}
+
+QTabWidget::tab-bar {
+     alignment: center;
+
+ }
+
+QTabWidget::pane {
+
+}
+
+QFrame#frame{
+    border:none;
+    background-color: transparent;
+}

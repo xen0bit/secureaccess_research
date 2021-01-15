@@ -1,0 +1,36 @@
+/******************************************************************************************** Container  **/
+
+QWidget#setupTopLeft{
+ image: url(:res/images/SecureVault/SanDisk/setup-logo.png);
+ border: none;
+}
+
+
+QFrame#loginLogoFrame {
+    image: url(:res/images/SecureVault/SanDisk/login-head-title.png);
+    border: none;
+}
+
+QFrame#productPopupLogo {
+    image: url(:/res/images/SecureVault/SanDisk/logo100-40.png);
+}
+
+/************************************************************************************************  Main  **/
+QFrame#mainWindowLogo {
+    background-image: url(:/res/images/SecureVault/SanDisk/main-logo.png);
+}
+
+/***********************************************************************************************  About  **/
+QFrame#aboutProductLogo {
+    background-image: url(:res/images/SecureVault/SanDisk/SV_about.png);
+    background-repeat:no-repeat;
+    background-position:center;
+    border:none;
+}
+
+/*******************************************************************************************  Vault Box  **/
+
+QWidget#VaultBox QFrame#frame{
+    border-image : url(:/res/images/SecureVault/SanDisk/SV_vaultBox_nonClose.png);
+    background-color : transparent;
+}

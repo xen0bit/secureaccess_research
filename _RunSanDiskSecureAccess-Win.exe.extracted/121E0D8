@@ -1,0 +1,17 @@
+*{
+        font: 10pt "Verdana";
+        color : black;
+}
+
+QLabel#titleLabel{
+    font: bold 16pt "Thaoma";
+}
+
+QLabel#localTitle{
+    font: 16pt "Thaoma";
+    font-weight: bold;
+}
+
+QLabel#pleaseReadLabel{
+    font: bold 12pt;
+}
